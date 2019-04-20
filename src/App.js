@@ -1,0 +1,55 @@
+import React, { Component } from 'react';
+import './App.css';
+// import axios from 'axios'
+import {Route,Link} from "react-router-dom"
+import Home from "./components/Home/Intro"
+import Articles from "./components/Articles/Articles"
+import FoodContent from "./components/FoodTracker/FoodContent"
+import Personal from "./components/Profile/Personal"
+
+const apiKey = process.env.REACT_APP_USDA_DATABASE_API_KEY;
+// const nutrients = "nutrient=2";
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      nutrients: []
+    }
+    this.fetchData = this.fetchData.bind(this);
+  }
+
+  fetchData() {
+    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=205&nutrients=204&nutrients=208&nutrients=269`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => error.message);
+  }
+
+  render() {
+    return (
+      <div>
+        <nav>
+          <h2>Nutrition Thermodynamics</h2>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="articles">Articles</Link></li>
+            <li><Link to="food-tracker">Food Tracker</Link></li>
+            <li><Link to="profile">Profile</Link></li>
+          </ul>
+        </nav>
+        
+        <main>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/articles" component={Articles}></Route>
+          <Route path="/food-tracker" component={FoodContent}></Route>
+          <Route path="/profile" component={Personal}></Route>
+        </main>
+        {/* <button onClick={() => this.fetchData()}>Press Me</button> */}
+      </div>
+    );
+  }
+}
+
+export default App;
