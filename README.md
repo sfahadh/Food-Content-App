@@ -1,4 +1,4 @@
-# Nutrition-Thermodynamics
+# Food Content App
 A food nutrition app in which you can grab the nutrient database of the food of choice and use that information to track calories.
 
 ## About the App
@@ -33,3 +33,6 @@ In the Health Profile component, the user can check the status of their recorded
 This will show a picture of the two pages together because they are connected and there are some overlapping information. And also visually it is easier to read. 
 
 ![total](https://user-images.githubusercontent.com/45612730/56463728-73807f00-63a7-11e9-966c-379ffa2b7afa.jpeg)
+
+## Technologies Used
+HTML, CSS, JavaScript, React, API, and promises
