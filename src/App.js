@@ -13,21 +13,24 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      nutrients: []
+      nutrientContent: []
     }
-    this.fetchData = this.fetchData.bind(this);
+    this.fetchFoodData = this.fetchFoodData.bind(this);
   }
 
-  fetchData() {
-    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=205&nutrients=204&nutrients=208&nutrients=269`)
+  fetchFoodData() {
+    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=204&nutrients=208&nutrients=269`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        this.setState({
+          nutrientContent: data.report.foods.map(food => food)
+        })
       })
       .catch(error => error.message);
   }
 
   render() {
+    const {nutrientContent} = this.state;
     return (
       <div>
         <nav>
@@ -43,10 +46,13 @@ class App extends Component {
         <main>
           <Route exact path="/" component={Home}></Route>
           <Route path="/articles" component={Articles}></Route>
-          <Route path="/food-tracker" component={FoodContent}></Route>
+          <Route path="/food-tracker" 
+            render={() => <FoodContent 
+            nutrientContent={nutrientContent}
+            fetchFoodData={this.fetchFoodData}/>}>
+          </Route>
           <Route path="/profile" component={Personal}></Route>
         </main>
-        {/* <button onClick={() => this.fetchData()}>Press Me</button> */}
       </div>
     );
   }

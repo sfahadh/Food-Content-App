@@ -18,7 +18,7 @@ h2 {
 
 .nutrition-content {
   display: grid;
-  grid-template-columns: repeat(3, 20vw);
+  grid-template-columns: repeat(4, 20vw);
   gird-template-rows: repeat(5, 300px);
   justify-content: center;
 }
