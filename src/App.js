@@ -13,15 +13,18 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      nutrientContent: []
+      nutrientContent: [],
     }
     this.fetchFoodData = this.fetchFoodData.bind(this);
   }
 
-  fetchFoodData() {
+  fetchFoodData(e) {
+    e.preventDefault();
     fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=204&nutrients=208&nutrients=269`)
       .then(response => response.json())
       .then(data => {
+        // Press Search button to console log data
+        // console.log(data)
         this.setState({
           nutrientContent: data.report.foods.map(food => food)
         })
@@ -34,7 +37,7 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <h2>Nutrition Thermodynamics</h2>
+          <h2 id="brand"><em>Nutri-Gainz</em></h2>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="articles">Articles</Link></li>

@@ -8,7 +8,9 @@ export default class FoodSearch extends Component {
     return (
       <div>
         <form>
-          <input placeholder="ENTER FOOD" onChange={searchfood}></input>
+          <input placeholder="ENTER FOOD" 
+            onChange={searchfood}
+            ></input>
           <button onClick={foodData}>SEARCH</button>
         </form>
       </div>

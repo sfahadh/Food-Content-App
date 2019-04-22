@@ -1,3 +1,4 @@
+/* ---------------- NAVBAR ---------------- */
 nav {
   display: flex;
   /* justify-content: flex-end; */
@@ -9,13 +10,16 @@ li {
   margin: 20px 2vw 2vw 10px;
 }
 
-h2 {
+#brand {
   display: inline-block;
   justify-content: flex-start;
   flex: 1;
   margin-left: 2vw;
 }
 
+
+
+/* ---------------- FOOD TABLE ---------------- */
 .nutrition-content {
   display: grid;
   grid-template-columns: repeat(4, 20vw);
@@ -38,6 +42,9 @@ h2 {
   border-left: 2px solid black;
 }
 
+
+
+/* ---------------- SEARCH BAR ---------------- */
 form {
   display: flex;
   justify-content: center;

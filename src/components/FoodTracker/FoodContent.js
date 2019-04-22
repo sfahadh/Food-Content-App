@@ -12,17 +12,22 @@ export default class FoodContent extends Component {
   }
   
   handleSearchInput(e) {
-    this.setState({
-    searchFood: e.target.value
-    })
     console.log(e.target.value)
+    this.setState({
+      searchFood: e.target.value
+    })
   }
 
 
   render() {
     const {nutrientContent, fetchFoodData} = this.props
-    // let foodNames = nutrientContent.map(names => names.name);
-    // console.log(foodNames[0])
+    let foodNames = nutrientContent.map(names => names.name);
+    if(this.state.searchFood === "abiyuch") {
+      console.log(foodNames[0])
+    } else {
+      console.log("ERROR! Wrong food")
+    }
+    // console.log(foodNames)
     // let nutrientInfo = nutrientContent.map(nutrients => nutrients.nutrients)
     // console.log(nutrientInfo[0]);
     return (
