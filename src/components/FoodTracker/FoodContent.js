@@ -6,7 +6,7 @@ export default class FoodContent extends Component {
     super(props)
 
     this.state = {
-      searchFood: ""
+      foodName: ""
     }
     this.handleSearchInput = this.handleSearchInput.bind(this)
   }
@@ -14,27 +14,33 @@ export default class FoodContent extends Component {
   handleSearchInput(e) {
     console.log(e.target.value)
     this.setState({
-      searchFood: e.target.value
+      foodName: e.target.value
     })
   }
 
-
-  render() {
-    const {nutrientContent, fetchFoodData} = this.props
-    let foodNames = nutrientContent.map(names => names.name);
-    if(this.state.searchFood === "abiyuch") {
-      console.log(foodNames[0])
-    } else {
-      console.log("ERROR! Wrong food")
-    }
+  findFood() {
+    let foodList = this.props.nutrientContent.map(names => names.name);
+    // console.log(foodNames)
+    // for(let food in foodList) {
+      if(this.state.foodName === foodList) {
+        console.log(this.state.foodName)
+      } else {
+        console.log("ERROR! Wrong food")
+      }
+    // }
     // console.log(foodNames)
     // let nutrientInfo = nutrientContent.map(nutrients => nutrients.nutrients)
     // console.log(nutrientInfo[0]);
+  }
+
+  render() {
+    this.findFood();
+    const {nutrientContent, fetchFoodData} = this.props
     return (
       <div>
         <FoodSearch 
           nutrientContent={nutrientContent} 
-          searchfood={this.handleSearchInput}
+          // searchfood={this.handleSearchInput}
           foodData={fetchFoodData}
         />
         <div className="nutrition-content">
@@ -63,6 +69,10 @@ export default class FoodContent extends Component {
             <div className="box bottom">-</div>
             <div className="box bottom">-</div>
         </div>
+        {
+          nutrientContent.map(foodNames =>
+            <li id="food-name" key={foodNames.ndbno}>{foodNames.name}</li>)
+        }
       </div>
     )
   }

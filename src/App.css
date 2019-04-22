@@ -50,3 +50,8 @@ form {
   justify-content: center;
   margin: 20px;
 }
+
+
+#food-name {
+  display: block;
+}

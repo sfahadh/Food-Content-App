@@ -15,11 +15,9 @@ class App extends Component {
     this.state = {
       nutrientContent: [],
     }
-    this.fetchFoodData = this.fetchFoodData.bind(this);
   }
 
-  fetchFoodData(e) {
-    e.preventDefault();
+  componentDidMount() {
     fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=204&nutrients=208&nutrients=269`)
       .then(response => response.json())
       .then(data => {
