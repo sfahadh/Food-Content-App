@@ -21,8 +21,6 @@ class App extends Component {
     fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=204&nutrients=208&nutrients=269`)
       .then(response => response.json())
       .then(data => {
-        // Press Search button to console log data
-        // console.log(data)
         this.setState({
           nutrientContent: data.report.foods.map(food => food)
         })
@@ -49,8 +47,7 @@ class App extends Component {
           <Route path="/articles" component={Articles}></Route>
           <Route path="/food-tracker" 
             render={() => <FoodContent 
-            nutrientContent={nutrientContent}
-            fetchFoodData={this.fetchFoodData}/>}>
+            nutrientContent={nutrientContent}/>}>
           </Route>
           <Route path="/profile" component={Personal}></Route>
         </main>
