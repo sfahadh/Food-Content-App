@@ -45,7 +45,7 @@ class App extends Component {
         <main>
           <Route exact path="/" component={Home}></Route>
           <Route path="/articles" component={Articles}></Route>
-          <Route path="/food-tracker" 
+          <Route exact path="/food-tracker" 
             render={() => <FoodContent 
             nutrientContent={nutrientContent}/>}>
           </Route>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import FoodSearch from "./FoodSearch"
+import {Link} from "react-router-dom"
 
 export default class FoodContent extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class FoodContent extends Component {
   }
 
   render() {
-    const {nutrientContent, fetchFoodData} = this.props
+    const {nutrientContent} = this.props
     return (
       <div>
         <FoodSearch 
@@ -35,7 +36,7 @@ export default class FoodContent extends Component {
             <div className="box">Weight</div>
             <div className="box">Value</div>
 
-            <div className="box left">Energy</div>
+            <div className="box left">Calories</div>
             <div className="box">-</div>
             <div className="box">-</div>
             <div className="box">-</div>
@@ -55,10 +56,16 @@ export default class FoodContent extends Component {
             <div className="box bottom">-</div>
             <div className="box bottom">-</div>
         </div>
-        {
+        {/* {
           this.state.foodName.map(foodNames => {
           return <li id="food-name" key={foodNames.ndbno}>{foodNames.name}</li>})
-        }
+        } */}
+
+        {
+          this.state.foodName.map(foodNames => {
+          return <li id="food-name" key={foodNames.ndbno}>
+            <Link to={`/food-tracker/${foodNames.ndbno}`}>{foodNames.name}</Link></li>})
+        } 
       </div>
     )
   }
