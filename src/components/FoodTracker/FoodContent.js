@@ -82,24 +82,25 @@ export default class FoodContent extends Component {
         <div className="box">g</div>
         <div className="box">{(() => {if(selectFood !== undefined) 
           return <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4) / 4}</p>})()}
-        </div>
+          </div>
         <div className="box">{(() => {if(selectFood !== undefined) 
           return <p>{parseInt(Math.round(selectFood.nutrients[3].value)) * 4}</p>})()}
-        </div>
+          </div>
 
         <div className="box left bottom">Fat</div>
         <div className="box bottom">g</div>
         <div className="box bottom">{(() => {if(selectFood !== undefined) 
           return <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9) / 9}</p>})()}
-        </div>
+          </div>
         <div className="box bottom">{(() => {if(selectFood !== undefined) 
           return <p>{parseInt(Math.round(selectFood.nutrients[2].value)) * 9}</p>})()}
-        </div>
+          </div>
       </div>
     )
 
     return (
       <div>
+        {this.props.loading ? <h2 id="loading">Fetching Data...</h2> : ""}
         <FoodSearch 
           nutrientContent={nutrientContent} 
           searchfood={this.handleSearchInput}
@@ -114,6 +115,7 @@ export default class FoodContent extends Component {
               to={`/food-tracker/${foodName.ndbno}`}
               onClick={(e) => {
                 e.preventDefault();
+                window.scrollTo(0, 0);
                 return this.displayFoodData(e, table)}
               }
             >{foodName.name}</Link></li>

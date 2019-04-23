@@ -84,3 +84,11 @@ input {
 #intro > h3 {
   font-size: 1.7vw;
 }
+
+
+
+#loading {
+  text-align: center;
+  font-size: 3vw;
+  color: red;
+}

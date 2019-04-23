@@ -13,6 +13,7 @@ class App extends Component {
     super()
     this.state = {
       nutrientContent: [],
+      loading: true
     }
   }
 
@@ -21,14 +22,15 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-          nutrientContent: data.report.foods.map(food => food)
+          nutrientContent: data.report.foods.map(food => food),
+          loading: false
         })
       })
       .catch(error => error.message);
   }
 
   render() {
-    const {nutrientContent} = this.state;
+    const {nutrientContent, loading} = this.state;
     return (
       <div>
         <nav>
@@ -46,7 +48,8 @@ class App extends Component {
           <Route path="/articles" component={Articles}></Route>
           <Route path="/food-tracker" 
             render={() => <FoodContent 
-            nutrientContent={nutrientContent}/>}>
+            nutrientContent={nutrientContent}
+            loading={loading}/>}>
           </Route>
           <Route path="/profile" component={Personal}></Route>
         </main>
