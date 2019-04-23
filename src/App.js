@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=204&nutrients=208&nutrients=269`)
+    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=205&nutrients=203&nutrients=208&nutrients=204`)
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -45,7 +45,7 @@ class App extends Component {
         <main>
           <Route exact path="/" component={Home}></Route>
           <Route path="/articles" component={Articles}></Route>
-          <Route exact path="/food-tracker" 
+          <Route path="/food-tracker" 
             render={() => <FoodContent 
             nutrientContent={nutrientContent}/>}>
           </Route>
