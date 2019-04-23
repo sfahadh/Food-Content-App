@@ -4,7 +4,10 @@ export default class Intro extends Component {
   render() {
     return (
       <div>
-        <h1>This is the Home Page</h1>
+        <div id="intro">
+          <h1>Nutrition Tracker (Prototype)</h1>
+          <h3>Track your nutrient intake and set body composition goals</h3>
+        </div>
       </div>
     )
   }

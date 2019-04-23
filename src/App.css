@@ -1,13 +1,13 @@
 /* ---------------- NAVBAR ---------------- */
 nav {
   display: flex;
-  /* justify-content: flex-end; */
   margin-right: 3vw;
 }
 
 li {
   display: inline-block;
   margin: 20px 2vw 2vw 10px;
+  font-size: 1.3vw;
 }
 
 #brand {
@@ -15,6 +15,7 @@ li {
   justify-content: flex-start;
   flex: 1;
   margin-left: 2vw;
+  font-size: 2.5vw;
 }
 
 
@@ -22,8 +23,8 @@ li {
 /* ---------------- FOOD TABLE ---------------- */
 .nutrition-content {
   display: grid;
-  grid-template-columns: repeat(4, 20vw);
-  gird-template-rows: repeat(5, 300px);
+  grid-template-columns: repeat(4, 19vw);
+  gird-template-rows: repeat(5, 200px);
   justify-content: center;
 }
 
@@ -32,6 +33,7 @@ li {
   border-top: 2px solid black;
   text-align: center;
   padding: 10px;
+  font-size: 1.5vw;
 }
 
 .bottom {
@@ -51,7 +53,34 @@ form {
   margin: 20px;
 }
 
+input {
+  font-size: 1.7vw;
+  width: 60vw;
+  padding: 10px;
+}
 
+
+
+/* ---------------- li tags for list of Food ---------------- */
 #food-name {
   display: block;
+  text-align: center;
+}
+
+
+
+/* ---------------- Intro Text ---------------- */
+#intro {
+  text-align: center;
+  margin: 8vh 23vw;
+  padding: 5vw;
+  /* background-color: rgba(43, 194, 43, 0.315); */
+}
+
+#intro > h1 {
+  font-size: 4.3vw;
+}
+
+#intro > h3 {
+  font-size: 1.7vw;
 }

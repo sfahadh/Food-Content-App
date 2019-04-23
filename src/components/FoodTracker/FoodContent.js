@@ -63,30 +63,38 @@ export default class FoodContent extends Component {
         <div className="box left">Energy</div>
         <div className="box">kcal</div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{selectFood.weight}</p>})()}</div>
+          return <p>{selectFood.weight}</p>})()}
+        </div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{selectFood.nutrients[0].value}</p>})()}</div>
+          return <p>{selectFood.nutrients[0].value}</p>})()}
+        </div>
 
         <div className="box left">Protein</div>
         <div className="box">g</div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round((selectFood.nutrients[1].value)) * 4) / 4}</p>})()}</div>
+          return <p>{parseInt(Math.round((selectFood.nutrients[1].value)) * 4) / 4}</p>})()}
+        </div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round(selectFood.nutrients[1].value)) * 4}</p>})()}</div>
+          return <p>{parseInt(Math.round(selectFood.nutrients[1].value)) * 4}</p>})()}
+        </div>
 
         <div className="box left">Carbohydrate</div>
         <div className="box">g</div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4) / 4}</p>})()}</div>
+          return <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4) / 4}</p>})()}
+        </div>
         <div className="box">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round(selectFood.nutrients[3].value)) * 4}</p>})()}</div>
+          return <p>{parseInt(Math.round(selectFood.nutrients[3].value)) * 4}</p>})()}
+        </div>
 
         <div className="box left bottom">Fat</div>
         <div className="box bottom">g</div>
         <div className="box bottom">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9) / 9}</p>})()}</div>
+          return <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9) / 9}</p>})()}
+        </div>
         <div className="box bottom">{(() => {if(selectFood !== undefined) 
-        return <p>{parseInt(Math.round(selectFood.nutrients[2].value)) * 9}</p>})()}</div>
+          return <p>{parseInt(Math.round(selectFood.nutrients[2].value)) * 9}</p>})()}
+        </div>
       </div>
     )
 
