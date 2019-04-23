@@ -8,7 +8,6 @@ import FoodContent from "./components/FoodTracker/FoodContent"
 import Personal from "./components/Profile/Personal"
 
 const apiKey = process.env.REACT_APP_USDA_DATABASE_API_KEY;
-// const nutrients = "nutrient=2";
 class App extends Component {
   constructor() {
     super()

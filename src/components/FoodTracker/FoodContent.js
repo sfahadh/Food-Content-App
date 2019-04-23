@@ -7,7 +7,8 @@ export default class FoodContent extends Component {
     super(props)
 
     this.state = {
-      foodName: []
+      foodNames: [],
+      selectFood: []
     }
     this.handleSearchInput = this.handleSearchInput.bind(this)
   }
@@ -18,56 +19,70 @@ export default class FoodContent extends Component {
       return searchedFood.name.toLowerCase().search(e.target.value.toLowerCase()) !== -1;
     })
     this.setState({
-      foodName: filteredFood
+      foodNames: filteredFood
     })
   }
 
-  displayFood(table) {
-    if(this.state.foodName.length === 1) {
-      return table
-    } else {
-      console.log("too many foods")
+  // displayFood(table) {
+  //   if(this.state.foodName.length === 1) {
+  //     return table
+  //   } else {
+  //     console.log("too many foods")
+  //   }
+  // }
+
+  displayFoodData = (e, table) => {
+    for(let i = 0; i < this.state.foodNames.length; i++) {
+      if(this.state.foodNames[i].name.includes(e.target.textContent)) {
+        this.setState({
+          selectFood: this.state.foodNames[i]
+        })
+        return table;
+      }
     }
   }
 
   render() {
-    console.log(this.props)
     const {nutrientContent} = this.props
+    const {foodNames} = this.state
+    console.log(this.state.selectFood)
+
     let table = (
-    <div className="nutrition-content">
-      <div className="box left">Nutrient</div>
-      <div className="box">Unit</div>
-      <div className="box">Weight</div>
-      <div className="box">Value</div>
+      <div className="nutrition-content">
+        <div className="box left">Nutrient</div>
+        <div className="box">Unit</div>
+        <div className="box">Weight</div>
+        <div className="box">Value</div>
 
-      <div className="box left">Energy</div>
-      <div className="box">kcal</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{this.state.foodName[0].weight}</p>})()}</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{this.state.foodName[0].nutrients[0].value}</p>})()}</div>
+        <div className="box left">Energy</div>
+        <div className="box">kcal</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{foodNames[0].weight}</p>})()}</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{foodNames[0].nutrients[0].value}</p>})()}</div>
 
-      <div className="box left">Protein</div>
-      <div className="box">g</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round((this.state.foodName[0].nutrients[1].value)) * 4) / 4}</p>})()}</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round(this.state.foodName[0].nutrients[1].value)) * 4}</p>})()}</div>
+        <div className="box left">Protein</div>
+        <div className="box">g</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round((foodNames[0].nutrients[1].value)) * 4) / 4}</p>})()}</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round(foodNames[0].nutrients[1].value)) * 4}</p>})()}</div>
 
-      <div className="box left">Carbohydrate</div>
-      <div className="box">g</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round((this.state.foodName[0].nutrients[3].value)) * 4) / 4}</p>})()}</div>
-      <div className="box">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round(this.state.foodName[0].nutrients[3].value)) * 4}</p>})()}</div>
+        <div className="box left">Carbohydrate</div>
+        <div className="box">g</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round((foodNames[0].nutrients[3].value)) * 4) / 4}</p>})()}</div>
+        <div className="box">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round(foodNames[0].nutrients[3].value)) * 4}</p>})()}</div>
 
-      <div className="box left bottom">Fat</div>
-      <div className="box bottom">g</div>
-      <div className="box bottom">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round((this.state.foodName[0].nutrients[2].value)) * 9) / 9}</p>})()}</div>
-      <div className="box bottom">{(() => {if(this.state.foodName[0] !== undefined) 
-      return <p>{parseInt(Math.round(this.state.foodName[0].nutrients[2].value)) * 9}</p>})()}</div>
-    </div>)
+        <div className="box left bottom">Fat</div>
+        <div className="box bottom">g</div>
+        <div className="box bottom">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round((foodNames[0].nutrients[2].value)) * 9) / 9}</p>})()}</div>
+        <div className="box bottom">{(() => {if(foodNames[0] !== undefined) 
+        return <p>{parseInt(Math.round(foodNames[0].nutrients[2].value)) * 9}</p>})()}</div>
+      </div>
+    )
 
     return (
       <div>
@@ -75,14 +90,18 @@ export default class FoodContent extends Component {
           nutrientContent={nutrientContent} 
           searchfood={this.handleSearchInput}
         />
-        
-          {this.displayFood(table)}
-
-
+          {/* {this.displayFood(table)} */}
         {
-          this.state.foodName.map(foodNames => {
-          return <li id="food-name" key={foodNames.ndbno}>
-            <Link to={`/food-tracker/${foodNames.ndbno}`}>{foodNames.name}</Link></li>})
+          foodNames.map(foodName => {
+          return <li id="food-name" key={foodName.ndbno}>
+            <Link 
+              to={`/food-tracker/${foodName.ndbno}`}
+              onClick={(e) => {
+                e.preventDefault();
+                return this.displayFoodData(e, table)}
+              }
+            >{foodName.name}</Link></li>
+          })
         } 
       </div>
     )
