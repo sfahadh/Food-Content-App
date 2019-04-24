@@ -36,3 +36,6 @@ This will show a picture of the two pages together because they are connected an
 
 ## Technologies Used
 HTML, CSS, JavaScript, React, API, and promises
+
+## Deployment
+This app is available at: https://food-database-app.herokuapp.com/food-tracker
