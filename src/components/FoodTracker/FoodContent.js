@@ -54,10 +54,10 @@ export default class FoodContent extends Component {
 
     let table = (
       <div className="nutrition-content">
-        <div className="box left">Nutrient</div>
-        <div className="box">Unit</div>
-        <div className="box">Weight (g)</div>
-        <div className="box">Value</div>
+        <div className="box left top">Nutrient</div>
+        <div className="box top">Unit</div>
+        <div className="box top">Weight (g)</div>
+        <div className="box top">Value</div>
 
         <div className="box left">Energy</div>
         <div className="box">kcal</div>
