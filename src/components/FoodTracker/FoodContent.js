@@ -50,14 +50,13 @@ export default class FoodContent extends Component {
     const {nutrientContent} = this.props
     const {foodNames, selectFood} = this.state
     console.log(selectFood)
-    console.log(selectFood[0])
     console.log(selectFood.weight)
 
     let table = (
       <div className="nutrition-content">
         <div className="box left">Nutrient</div>
         <div className="box">Unit</div>
-        <div className="box">Weight</div>
+        <div className="box">Weight (g)</div>
         <div className="box">Value</div>
 
         <div className="box left">Energy</div>
@@ -70,31 +69,67 @@ export default class FoodContent extends Component {
         </div>
 
         <div className="box left">Protein</div>
-        <div className="box">g</div>
-        <div className="box">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round((selectFood.nutrients[1].value)) * 4) / 4}</p>})()}
+        <div className="box">grams</div>
+        <div className="box">{(() => {
+          if(selectFood.nutrients[1].value !== undefined) {
+            return (parseInt(selectFood.nutrients[1].value !== typeof 1) || selectFood.nutrients[1].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[1].value)) * 4) / 4}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
         </div>
-        <div className="box">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round(selectFood.nutrients[1].value)) * 4}</p>})()}
+        <div className="box">{(() => {
+          if(selectFood.nutrients[1].value !== undefined) {
+            return (parseInt(selectFood.nutrients[1].value !== typeof 1) || selectFood.nutrients[1].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[1].value)) * 4)}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
         </div>
 
         <div className="box left">Carbohydrate</div>
-        <div className="box">g</div>
-        <div className="box">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4) / 4}</p>})()}
-          </div>
-        <div className="box">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round(selectFood.nutrients[3].value)) * 4}</p>})()}
-          </div>
+        <div className="box">grams</div>
+        <div className="box">{(() => {
+          if(selectFood.nutrients[2].value !== undefined) {
+            return (parseInt(selectFood.nutrients[2].value !== typeof 1) || selectFood.nutrients[2].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 4) / 4}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
+        </div>
+        <div className="box">{(() => {
+          if(selectFood.nutrients[2].value !== undefined) {
+            return (parseInt(selectFood.nutrients[2].value !== typeof 1) || selectFood.nutrients[2].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 4)}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
+        </div>
 
         <div className="box left bottom">Fat</div>
-        <div className="box bottom">g</div>
-        <div className="box bottom">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9) / 9}</p>})()}
-          </div>
-        <div className="box bottom">{(() => {if(selectFood !== undefined) 
-          return <p>{parseInt(Math.round(selectFood.nutrients[2].value)) * 9}</p>})()}
-          </div>
+        <div className="box bottom">grams</div>
+        <div className="box bottom">{(() => {
+          if(selectFood.nutrients[1].value !== undefined) {
+            return (parseInt(selectFood.nutrients[3].value !== typeof 1) || selectFood.nutrients[3].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4) / 4}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
+        </div>
+        <div className="box bottom">{(() => {
+          if(selectFood.nutrients[3].value !== undefined) {
+            return (parseInt(selectFood.nutrients[3].value !== typeof 1) || selectFood.nutrients[3].value === '--') ? <p>0</p> :
+              <p>{parseInt(Math.round((selectFood.nutrients[3].value)) * 4)}</p> 
+          } else {
+            return <p></p>
+          }
+        })()}
+        </div>
       </div>
     )
 
