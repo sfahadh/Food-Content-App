@@ -8,7 +8,7 @@ export default class FoodSearch extends Component {
     return (
       <div>
         <form>
-          <input 
+          <input id="searchFood"
             placeholder="ENTER FOOD" 
             onChange={this.props.searchfood}
           ></input>

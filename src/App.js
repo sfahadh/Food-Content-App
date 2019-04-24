@@ -36,10 +36,10 @@ class App extends Component {
         <nav>
           <h2 id="brand"><em>Nutri-Gainz</em></h2>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="articles">Articles</Link></li>
-            <li><Link to="food-tracker">Food Tracker</Link></li>
-            <li><Link to="profile">Profile</Link></li>
+            <li><Link style={{color: 'orange'}} to="/">Home</Link></li>
+            <li><Link style={{color: 'orange'}} to="articles">Articles</Link></li>
+            <li><Link style={{color: 'orange'}} to="food-tracker">Food Tracker</Link></li>
+            <li><Link style={{color: 'orange'}}to="profile">Profile</Link></li>
           </ul>
         </nav>
         

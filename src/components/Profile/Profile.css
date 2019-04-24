@@ -1,0 +1,37 @@
+#personalInfo { 
+    display: flex;
+    background-color: rgba(65, 165, 34, 0.664);
+}
+
+img {
+    border-radius: 100%;
+    margin: 3%;
+    flex: 0.4;
+    width: 10vw;
+    height: 160px;
+}
+
+
+.infoProfile {
+    width: 80vw;
+    margin: 20px auto;
+}
+
+.general {
+    display: block;
+}
+
+.names {
+    flex: 1;
+}
+
+input {
+    width: 22vw;
+    font-size: 1.1vw;
+    padding: 8px;
+    margin: 12px;
+}
+
+#healthTitle {
+    margin-top: 40px;
+}

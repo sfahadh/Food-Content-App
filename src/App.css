@@ -2,6 +2,13 @@
 nav {
   display: flex;
   margin-right: 3vw;
+  width: 100vw;
+  background-color: rgba(3, 61, 3, 0.918);
+}
+
+nav li:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 li {
@@ -15,7 +22,8 @@ li {
   justify-content: flex-start;
   flex: 1;
   margin-left: 2vw;
-  font-size: 2.5vw;
+  font-size: 3.5vw;
+  color: orange;
 }
 
 
@@ -53,10 +61,10 @@ form {
   margin: 20px;
 }
 
-input {
-  font-size: 1.7vw;
+#searchFood {
+  font-size: 1.4vw;
   width: 60vw;
-  padding: 10px;
+  padding: 12px;
 }
 
 
@@ -72,7 +80,7 @@ input {
 /* ---------------- Intro Text ---------------- */
 #intro {
   text-align: center;
-  margin: 8vh 23vw;
+  margin: 14vh 23vw;
   padding: 5vw;
   /* background-color: rgba(43, 194, 43, 0.315); */
 }
@@ -86,7 +94,7 @@ input {
 }
 
 
-
+/* ---------------- Loading Time ---------------- */
 #loading {
   text-align: center;
   font-size: 3vw;
