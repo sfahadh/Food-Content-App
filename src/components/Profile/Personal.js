@@ -1,50 +1,47 @@
 import React, { Component } from 'react'
 import './Profile.css';
-import {Button, Form} from "semantic-ui-react"
+import HealthProfile from "./HealthProfile"
 
 export default class Personal extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      firstName: "",
+      lastName: "",
+      emailAddress: "",
+      phoneNumber: "",
+      datOfBirth: "",
+      streetAddress: ""
+    }
+  }
+
+  handleUsersInput(e) {
+    console.log(e.target.value)
+  }
+
   render() {
     return (
       <div className="infoProfile">
         <h1>Personal Info</h1>
         <div id="personalInfo">
-          <img src={require("./profilePic.png")}></img>
+          <img src={require("./profilePic.png")} alt="profile"></img>
           <form className="general">
             <div className="names">
-              <input placeholder="First Name"></input>
-              <input placeholder="Last Name"></input>
+              <input placeholder="First Name" onChange={this.handleUsersInput}></input>
+              <input placeholder="Last Name" onChange={this.handleUsersInput}></input>
             </div>
             <div>
-              <input placeholder="Email Address"></input>
-              <input placeholder="Phone Number"></input>
+              <input placeholder="Email Address" onChange={this.handleUsersInput}></input>
+              <input placeholder="Phone Number" onChange={this.handleUsersInput}></input>
             </div>
             <div>
-              <input placeholder="Date of Birth"></input>
-              <input placeholder="Street Address"></input>
+              <input placeholder="Date of Birth" onChange={this.handleUsersInput}></input>
+              <input placeholder="Street Address" onChange={this.handleUsersInput}></input>
             </div>
           </form>
         </div>
-       
-        <h1 id="healthTitle">Health Profile</h1>
-        <div id="personalInfo">
-          <form className="general health">
-            <div className="bmi">
-              <input placeholder="Weight (lbs)"></input>
-              <input placeholder="Starting Weight"></input>
-              <input placeholder="Body Fat %"></input>
-            </div>
-            <div>
-              <input placeholder="Height (in)"></input>
-              <input placeholder="Current Weight"></input>
-              <input placeholder="Age"></input>
-            </div>
-            <div>
-              <input placeholder="Body Mass Index"></input>
-              <input placeholder="Goal Weight"></input>
-              <input placeholder="Waist-to-Hip Ratio"></input>
-            </div>
-          </form>
-        </div>
+       <HealthProfile />
       </div>
     )
   }

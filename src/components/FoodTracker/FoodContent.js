@@ -49,8 +49,6 @@ export default class FoodContent extends Component {
   render() {
     const {nutrientContent} = this.props
     const {foodNames, selectFood} = this.state
-    console.log(selectFood)
-    console.log(selectFood.weight)
 
     let table = (
       <div className="nutrition-content">
