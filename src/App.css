@@ -26,14 +26,13 @@ li {
   color: orange;
 }
 
-
-
 /* ---------------- FOOD TABLE ---------------- */
 .nutrition-content {
   display: grid;
   grid-template-columns: repeat(4, 19vw);
   gird-template-rows: repeat(5, 200px);
   justify-content: center;
+  margin-bottom: 2%;
 }
 
 .box {
@@ -72,9 +71,18 @@ form {
 /* ---------------- li tags for list of Food ---------------- */
 #food-name {
   display: block;
-  text-align: center;
+  margin: 0;
+  margin-left: 10%;
+  border: 2px solid green;
+  width: 80vw;
+  padding: 20px;
+  font-weight: 700;
+  background-color: rgba(3, 61, 3, 0.918);
 }
 
+#food-name:hover {
+  background-color: green;
+}
 
 
 /* ---------------- Intro Text ---------------- */

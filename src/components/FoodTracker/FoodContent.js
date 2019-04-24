@@ -112,6 +112,7 @@ export default class FoodContent extends Component {
           foodNames.map(foodName => {
           return <li id="food-name" key={foodName.ndbno}>
             <Link 
+              style={{color: 'orange'}}
               to={`/food-tracker/${foodName.ndbno}`}
               onClick={(e) => {
                 e.preventDefault();
