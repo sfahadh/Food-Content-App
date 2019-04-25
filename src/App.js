@@ -5,7 +5,7 @@ import {Route,Link} from "react-router-dom"
 import Home from "./components/Home/Intro"
 import Articles from "./components/Articles/Articles"
 import FoodContent from "./components/FoodTracker/FoodContent"
-import Personal from "./components/Profile/Personal"
+import Personal from "./components/Profile/Login"
 
 const apiKey = process.env.REACT_APP_USDA_DATABASE_API_KEY;
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${apiKey}&nutrients=205&nutrients=203&nutrients=208&nutrients=204`)
+    fetch(`https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${process.env.REACT_APP_USDA_DATABASE_API_KEY}&nutrients=205&nutrients=203&nutrients=208&nutrients=204`)
       .then(response => response.json())
       .then(data => {
         this.setState({

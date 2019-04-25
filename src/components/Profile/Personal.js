@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Profile.css';
 import HealthProfile from "./HealthProfile"
+import Login from "./Login"
 
 export default class Personal extends Component {
   constructor() {
@@ -31,18 +32,13 @@ export default class Personal extends Component {
     localStorage.setItem("phoneNumber", this.state.phoneNumber)
     localStorage.setItem("dateOfBirth", this.state.dateOfBirth)
     localStorage.setItem("streetAddress", this.state.streetAddress)
-    console.log(this.state.firstName)
-    console.log(this.state.lastName)
-    console.log(this.state.emailAddress)
-    console.log(this.state.phoneNumber)
-    console.log(this.state.dateOfBirth)
-    console.log(this.state.streetAddress)
   }
 
   render() {
     this.storePersonalInfo()
     return (
       <div id="profile-background">
+      {/* <Login/> */}
         <div className="infoProfile">
           <h1>Personal Info</h1>
           <div id="personalInfo">

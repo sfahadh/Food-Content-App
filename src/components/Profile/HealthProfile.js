@@ -33,14 +33,6 @@ export default class HealthProfile extends Component {
     localStorage.setItem("bodyFat", this.state.bodyFat)
     localStorage.setItem("age", this.state.age)
     localStorage.setItem("wthRatio", this.state.wthRatio)
-    console.log(this.state.weight)
-    console.log(this.state.height)
-    console.log(this.state.startingWeight)
-    console.log(this.state.currentWeight)
-    console.log(this.state.goalWeight)
-    console.log(this.state.bodyFat)
-    console.log(this.state.age)
-    console.log(this.state.wthRatio)
   }
 
 
