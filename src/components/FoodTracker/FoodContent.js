@@ -113,7 +113,7 @@ export default class FoodContent extends Component {
         <div className="box bottom">{(() => {
           if(selectFood.nutrients[2].value !== undefined) {
             return (parseInt(selectFood.nutrients[2].value !== typeof 1) || selectFood.nutrients[2].value === '--') ? <p>0</p> :
-              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 4) / 4}</p> 
+              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9) / 9}</p> 
           } else {
             return <p></p>
           }
@@ -122,7 +122,7 @@ export default class FoodContent extends Component {
         <div className="box bottom">{(() => {
           if(selectFood.nutrients[2].value !== undefined) {
             return (parseInt(selectFood.nutrients[2].value !== typeof 1) || selectFood.nutrients[2].value === '--') ? <p>0</p> :
-              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 4)}</p> 
+              <p>{parseInt(Math.round((selectFood.nutrients[2].value)) * 9)}</p> 
           } else {
             return <p></p>
           }

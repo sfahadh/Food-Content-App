@@ -42,7 +42,10 @@ I've made several changes for this web application. One is that the food tracker
 
 In the health profile account, there is no measurement data or a button to calculate BMI.
 
-What I added to the web application is a login page. The login page will not let the user view the profile page if he/she does not enter the correct credentials. 
+What I added to the web application is a login page. The login page will not let the user view the profile page if he/she does not enter the correct credentials. I'v only added one correct username and password and it is:
+**Username:** fahad
+**Password:** idk
+
 
 ## Deployment
 This app is available at: https://food-database-app.herokuapp.com
