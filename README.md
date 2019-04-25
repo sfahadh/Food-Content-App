@@ -37,5 +37,12 @@ This will show a picture of the two pages together because they are connected an
 ## Technologies Used
 HTML, CSS, JavaScript, React, API, and promises
 
+## Update
+I've made several changes for this web application. One is that the food tracker only tracks 4 types of nutrients, which are energy, protein, carbs, and fats. And it only accounts for the weight of the food that's stored in the database and not by per ounce and per 100 grams. The data table also accounts for the amount of protein, carbs, and fats as well as its conversion to energy. 
+
+In the health profile account, there is no measurement data or a button to calculate BMI.
+
+What I added to the web application is a login page. The login page will not let the user view the profile page if he/she does not enter the correct credentials. 
+
 ## Deployment
-This app is available at: https://food-database-app.herokuapp.com/food-tracker
+This app is available at: https://food-database-app.herokuapp.com
