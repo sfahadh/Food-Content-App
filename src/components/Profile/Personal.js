@@ -11,23 +11,36 @@ export default class Personal extends Component {
       lastName: "",
       emailAddress: "",
       phoneNumber: "",
-      datOfBirth: "",
+      dateOfBirth: "",
       streetAddress: ""
     }
+    this.handleProfileInput = this.handleProfileInput.bind(this);
   }
 
-  handleUsersInput(e) {
+  handleProfileInput(e) {
     this.setState({
-      firstName: e.target.value,
-      lastName: e.target.value,
-      emailAddress: e.target.value,
-      phoneNumber: e.target.value,
-      datOfBirth: e.target.value,
-      streetAddress: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
+  }
+  
+
+  storePersonalInfo() {
+    localStorage.setItem("firstName", this.state.firstName)
+    localStorage.setItem("lastName", this.state.lastName)
+    localStorage.setItem("emailAddress", this.state.emailAddress)
+    localStorage.setItem("phoneNumber", this.state.phoneNumber)
+    localStorage.setItem("dateOfBirth", this.state.dateOfBirth)
+    localStorage.setItem("streetAddress", this.state.streetAddress)
+    console.log(this.state.firstName)
+    console.log(this.state.lastName)
+    console.log(this.state.emailAddress)
+    console.log(this.state.phoneNumber)
+    console.log(this.state.dateOfBirth)
+    console.log(this.state.streetAddress)
   }
 
   render() {
+    this.storePersonalInfo()
     return (
       <div id="profile-background">
         <div className="infoProfile">
@@ -36,17 +49,44 @@ export default class Personal extends Component {
             <img src={require("./profilePic.png")} alt="profile"></img>
             <form className="general">
               <div className="names">
-                <input placeholder="First Name" onChange={this.handleUsersInput}></input>
-                <input placeholder="Last Name" onChange={this.handleUsersInput}></input>
+                <input 
+                  placeholder="First Name" 
+                  name='firstName' 
+                  onChange={this.handleProfileInput}>
+                </input>
+                <input 
+                  placeholder="Last Name" 
+                  name='lastName' 
+                  onChange={this.handleProfileInput}>
+                </input>
               </div>
+
               <div>
-                <input placeholder="Email Address" onChange={this.handleUsersInput}></input>
-                <input placeholder="Phone Number" onChange={this.handleUsersInput}></input>
+                <input 
+                  placeholder="Email Address" 
+                  name='emailAddress' 
+                  onChange={this.handleProfileInput}>
+                </input>
+                <input 
+                  placeholder="Phone Number" 
+                  name='phoneNumber' 
+                  onChange={this.handleProfileInput}>
+                </input>
               </div>
+
               <div>
-                <input placeholder="Date of Birth" onChange={this.handleUsersInput}></input>
-                <input placeholder="Street Address" onChange={this.handleUsersInput}></input>
+                <input 
+                  placeholder="Date of Birth" 
+                  name='dateOfBirth' 
+                  onChange={this.handleProfileInput}>
+                </input>
+                <input 
+                  placeholder="Street Address" 
+                  name='streetAddress' 
+                  onChange={this.handleProfileInput}>
+                </input>
               </div>
+
             </form>
           </div>
         <HealthProfile />
