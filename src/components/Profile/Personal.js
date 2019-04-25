@@ -17,7 +17,14 @@ export default class Personal extends Component {
   }
 
   handleUsersInput(e) {
-    console.log(e.target.value)
+    this.setState({
+      firstName: e.target.value,
+      lastName: e.target.value,
+      emailAddress: e.target.value,
+      phoneNumber: e.target.value,
+      datOfBirth: e.target.value,
+      streetAddress: e.target.value
+    })
   }
 
   render() {

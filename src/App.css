@@ -101,15 +101,19 @@ form {
   text-align: center;
   margin: 14vh 23vw;
   padding: 5vw;
-  /* background-color: rgba(43, 194, 43, 0.315); */
+  background-color: rgba(65, 165, 34, 0.64);
 }
 
 #intro > h1 {
   font-size: 4.3vw;
+  color: orange;
+  text-shadow: 2px 2px black;
 }
 
 #intro > h3 {
   font-size: 1.7vw;
+  color: orange;
+  text-shadow: 2px 2px black;
 }
 
 
@@ -118,4 +122,26 @@ form {
   text-align: center;
   font-size: 3vw;
   color: red;
+}
+
+#home {
+  border: 2px solid black;
+  height: 87vh;
+  background-image: url("./components/Home/meEating.png");
+  background-size: 100%;
+}
+
+#food {
+  display: block;
+  width: 76vw;
+  padding: 4%;
+  font-size: 1.4vw;
+  text-align: center;
+  border: 2px solid green;
+  color: orange;
+  background-color: green;
+}
+
+span {
+  font-weight: 900;
 }
