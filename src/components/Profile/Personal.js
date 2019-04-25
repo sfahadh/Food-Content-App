@@ -29,26 +29,28 @@ export default class Personal extends Component {
 
   render() {
     return (
-      <div className="infoProfile">
-        <h1>Personal Info</h1>
-        <div id="personalInfo">
-          <img src={require("./profilePic.png")} alt="profile"></img>
-          <form className="general">
-            <div className="names">
-              <input placeholder="First Name" onChange={this.handleUsersInput}></input>
-              <input placeholder="Last Name" onChange={this.handleUsersInput}></input>
-            </div>
-            <div>
-              <input placeholder="Email Address" onChange={this.handleUsersInput}></input>
-              <input placeholder="Phone Number" onChange={this.handleUsersInput}></input>
-            </div>
-            <div>
-              <input placeholder="Date of Birth" onChange={this.handleUsersInput}></input>
-              <input placeholder="Street Address" onChange={this.handleUsersInput}></input>
-            </div>
-          </form>
+      <div id="profile-background">
+        <div className="infoProfile">
+          <h1>Personal Info</h1>
+          <div id="personalInfo">
+            <img src={require("./profilePic.png")} alt="profile"></img>
+            <form className="general">
+              <div className="names">
+                <input placeholder="First Name" onChange={this.handleUsersInput}></input>
+                <input placeholder="Last Name" onChange={this.handleUsersInput}></input>
+              </div>
+              <div>
+                <input placeholder="Email Address" onChange={this.handleUsersInput}></input>
+                <input placeholder="Phone Number" onChange={this.handleUsersInput}></input>
+              </div>
+              <div>
+                <input placeholder="Date of Birth" onChange={this.handleUsersInput}></input>
+                <input placeholder="Street Address" onChange={this.handleUsersInput}></input>
+              </div>
+            </form>
+          </div>
+        <HealthProfile />
         </div>
-       <HealthProfile />
       </div>
     )
   }

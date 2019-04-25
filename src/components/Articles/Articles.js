@@ -4,7 +4,7 @@ import "./Articles.css"
 export default class Articles extends Component {
   render() {
     return (
-      <div>
+      <div id="article-background">
         <div className="articleCard">
           <h1>The Basis of All Diets: Energy Conservation</h1>
           <div class="articleSummary">

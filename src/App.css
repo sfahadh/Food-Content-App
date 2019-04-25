@@ -1,4 +1,3 @@
-/* ---------------- NAVBAR ---------------- */
 nav {
   display: flex;
   margin-right: 3vw;
@@ -26,7 +25,6 @@ li {
   color: orange;
 }
 
-/* ---------------- FOOD TABLE ---------------- */
 .nutrition-content {
   display: grid;
   grid-template-columns: repeat(4, 19vw);
@@ -41,7 +39,7 @@ li {
   text-align: center;
   padding: 10px;
   font-size: 1.5vw;
-  background-color: rgba(65, 165, 34, 0.664);
+  background-color: rgba(65, 165, 34);
 }
 
 .bottom {
@@ -50,19 +48,16 @@ li {
 
 .left {
   border-left: 2px solid black;
-  background-color: rgba(3, 61, 3, 0.918);
+  background-color: rgba(3, 61, 3);
   color: orange;
 }
 
 .top {
-  background-color: rgba(3, 61, 3, 0.918);
+  background-color: rgba(3, 61, 3);
   color: orange;
 
 }
 
-
-
-/* ---------------- SEARCH BAR ---------------- */
 form {
   display: flex;
   justify-content: center;
@@ -74,12 +69,10 @@ form {
   width: 60vw;
   padding: 12px;
   color: orange;
-  background-color: rgba(3, 61, 3, 0.918);
+  background-color: rgba(3, 61, 3);
+  border: 2px solid green;
 }
 
-
-
-/* ---------------- li tags for list of Food ---------------- */
 #food-name {
   display: block;
   margin: 0;
@@ -88,20 +81,18 @@ form {
   width: 80vw;
   padding: 20px;
   font-weight: 700;
-  background-color: rgba(3, 61, 3, 0.918);
+  background-color: rgba(3, 61, 3);
 }
 
 #food-name:hover {
   background-color: green;
 }
 
-
-/* ---------------- Intro Text ---------------- */
 #intro {
   text-align: center;
   margin: 14vh 23vw;
   padding: 5vw;
-  background-color: rgba(65, 165, 34, 0.64);
+  background-color: rgba(65, 165, 34, 0.6);
 }
 
 #intro > h1 {
@@ -116,8 +107,6 @@ form {
   text-shadow: 2px 2px black;
 }
 
-
-/* ---------------- Loading Time ---------------- */
 #loading {
   text-align: center;
   font-size: 3vw;
@@ -144,4 +133,8 @@ form {
 
 span {
   font-weight: 900;
+}
+
+body {
+  background-image: url("./components/nutrition.png");
 }

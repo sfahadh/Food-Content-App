@@ -35,3 +35,9 @@ input {
 #healthTitle {
     margin-top: 40px;
 }
+
+#profile-background {
+    height: 90vh;
+    background: white;
+    padding-top: 1%;
+}

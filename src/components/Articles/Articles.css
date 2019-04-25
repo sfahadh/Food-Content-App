@@ -3,7 +3,7 @@
     margin: 2% 10%;
     height: 70%;
     border: solid black;
-    background-color: rgba(65, 165, 34, 0.664);
+    background-color: rgba(65, 165, 34, 0.8);
 }
 
 .articleCard > h1{ 
@@ -11,8 +11,8 @@
     padding: 10px;
     margin: 1% 5%;
     font-size: 2.7vw;
-    text-shadow: 2px 2px orange;
-    color: green;
+    text-shadow: 2px 2px green;
+    color: orange;
 }
 
 .articleSummary {
@@ -24,7 +24,7 @@
     height: 40vh;
     margin: 0 0 30px 40px;
     border-radius: 0;
-    border: 4px solid rgba(4, 155, 12, 0.835);
+    border: 4px solid rgba(4, 155, 12);
 }
 
 .articleSummary p {
@@ -54,5 +54,10 @@
 .articleSummary button a {
     text-decoration: none;
     color: white;
+}
+
+#article-background {
+    background-color: white;
+    border: 2px solid white;    
 }
 
