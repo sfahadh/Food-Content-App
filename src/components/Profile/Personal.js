@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Profile.css';
 import HealthProfile from "./HealthProfile"
-import Login from "./Login"
 
 export default class Personal extends Component {
   constructor() {
@@ -38,7 +37,6 @@ export default class Personal extends Component {
     this.storePersonalInfo()
     return (
       <div id="profile-background">
-      {/* <Login/> */}
         <div className="infoProfile">
           <h1>Personal Info</h1>
           <div id="personalInfo">

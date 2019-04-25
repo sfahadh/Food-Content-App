@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 // import axios from 'axios'
-import {Route,Link} from "react-router-dom"
+import {Route, Link} from "react-router-dom"
 import Home from "./components/Home/Intro"
 import Articles from "./components/Articles/Articles"
 import FoodContent from "./components/FoodTracker/FoodContent"
-import Personal from "./components/Profile/Login"
+import Login from "./components/Profile/Login"
+import Personal from "./components/Profile/Personal"
 
-const apiKey = process.env.REACT_APP_USDA_DATABASE_API_KEY;
 class App extends Component {
   constructor() {
     super()
@@ -51,7 +51,8 @@ class App extends Component {
             nutrientContent={nutrientContent}
             loading={loading}/>}>
           </Route>
-          <Route path="/profile" component={Personal}></Route>
+          <Route exact path="/profile" component={Login}></Route>
+          <Route exact path="/profile/personal" component={Personal}></Route>
         </main>
       </div>
     );

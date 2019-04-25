@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Profile.css';
-import Personal from "./Personal"
+import {Redirect} from "react-router-dom"
 
 export default class Login extends Component {
     constructor() {
@@ -10,13 +10,47 @@ export default class Login extends Component {
             username: "",
             password: "",
             myUsername: "fahad",
-            myPassword: "idk"
+            myPassword: "idk",
+            isUsername: false,
+            isPassword: false,
+            open: true,
+            isLoggedIn: false
         }
         // this.handleLoginCredentials = this.handleLoginCredentials.bind(this)
+        this.validatePassword = this.validatePassword.bind(this);
+        this.validateUsername = this.validateUsername.bind(this);
+        this.validateCredentials = this.validateCredentials.bind(this);
     }
 
-    verifyLoginCredentials() {
-        
+    show = dimmer => () => this.setState({ dimmer, open: true })
+    
+    close = () => this.setState({ open: false })
+
+    validateUsername(e) {
+        if(e.target.value === this.state.myUsername) 
+            this.setState({
+                isUsername: true
+            })
+            this.validatePassword(e);
+    }
+
+    validatePassword(e) {
+        if(e.target.value === this.state.myPassword) 
+            this.setState({
+                isPassword: true
+            })
+    }
+
+    validateCredentials(e) {
+        e.preventDefault();
+        if(!!this.state.isUsername && !!this.state.isPassword) {
+            alert("LOGIN")
+            this.setState({
+                isLoggedIn: true
+            })
+        } else {
+            alert("WRONG");
+        }
     }
 
     // handleLoginCredentials(e) {
@@ -37,6 +71,9 @@ export default class Login extends Component {
     }
 
   render() {
+    if(this.state.isLoggedIn) {
+        return <Redirect to="/profile/personal"/>
+    }
     //   this.storeloginCredentials();
     return (
       <div>
@@ -47,18 +84,20 @@ export default class Login extends Component {
                     placeholder="username"
                     // value={this.state.username} //use for register
                     // name="username"
-                    // onChange={this.handleLoginCredentials}
+                    onChange={this.validateUsername}
                 ></input>
                 <input 
                     placeholder="password"
                     // value={this.state.password} //use for register
                     // name="password"
-                    // onChange={this.handleLoginCredentials}
+                    onChange={this.validatePassword}
                 ></input>
-                <button onClick={this.loginButton}>LOGIN</button>
+                <button onClick={this.validateCredentials}>LOGIN</button>
             </div>
           </form>
-          <Personal/>
+          {/* <Personal/> */}
+          <div>
+      </div>
       </div>
     )
   }
