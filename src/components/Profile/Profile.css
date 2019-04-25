@@ -51,7 +51,7 @@ input {
 
 #loginForm {
     width: 38vw;
-    border: 2px solid red;
+    border: 2px solid orange;
     margin: 2% auto;
     background-color: white;
     height: 500px;
@@ -89,7 +89,7 @@ input {
 }
 
 #login-background {
-    border: 2px solid red;
+    border: 2px solid green;
     height: 90vh;
     background-image: url("../nutrition.png");
   }
