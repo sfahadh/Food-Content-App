@@ -133,7 +133,7 @@ export default class FoodContent extends Component {
     )
 
     return (
-      <div>
+      <div id="foodTracker-background">
         {this.props.loading ? <h2 id="loading">Fetching Data...</h2> : ""}
         <FoodSearch 
           nutrientContent={nutrientContent} 

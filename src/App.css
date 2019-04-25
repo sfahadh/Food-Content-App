@@ -136,7 +136,8 @@ span {
 }
 
 body {
-  background-image: url("./components/nutrition.png");
+  background-image: url("./components/FoodTracker/foodTracker-background.jpg");
+  background-size: 100%;
 }
 
 #credit {
@@ -147,3 +148,5 @@ body {
   color: green;
   text-shadow: 1px 1px orange;
 }
+
+

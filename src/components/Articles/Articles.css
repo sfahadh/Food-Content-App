@@ -1,9 +1,9 @@
 .articleCard {
     width: 80%;
     margin: 2% 10%;
-    height: 70%;
+    height: 80%;
     border: solid black;
-    background-color: rgba(65, 165, 34, 0.8);
+    background-color: rgba(65, 165, 34, 0.95);
 }
 
 .articleCard > h1{ 
@@ -57,7 +57,8 @@
 }
 
 #article-background {
-    background-color: white;
+    background-image: url("./nutrition-background.jpg");
+    background-size: 100%;
     border: 2px solid white;    
 }
 

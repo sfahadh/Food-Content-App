@@ -44,7 +44,6 @@ export default class Login extends Component {
     validateCredentials(e) {
         e.preventDefault();
         if(!!this.state.isUsername && !!this.state.isPassword) {
-            alert("LOGIN")
             this.setState({
                 isLoggedIn: true
             })
@@ -52,19 +51,6 @@ export default class Login extends Component {
             alert("WRONG");
         }
     }
-
-    // handleLoginCredentials(e) {
-    //     this.setState({
-    //         [e.target.name]: e.target.value,
-    //     });
-    // }
-
-    // storeloginCredentials() {
-    //     localStorage.setItem("username", this.state.username)
-    //     localStorage.setItem("password", this.state.password)
-    //     console.log(this.state.username)
-    //     console.log(this.state.password)
-    // }
 
     loginButton(e) {
         e.preventDefault();
@@ -74,30 +60,26 @@ export default class Login extends Component {
     if(this.state.isLoggedIn) {
         return <Redirect to="/profile/personal"/>
     }
-    //   this.storeloginCredentials();
+
     return (
-      <div>
-        <h2>Login:</h2>
-        <form className="login">
-            <div className="loginFields">
-                <input 
-                    placeholder="username"
-                    // value={this.state.username} //use for register
-                    // name="username"
-                    onChange={this.validateUsername}
-                ></input>
-                <input 
-                    placeholder="password"
-                    // value={this.state.password} //use for register
-                    // name="password"
-                    onChange={this.validatePassword}
-                ></input>
-                <button onClick={this.validateCredentials}>LOGIN</button>
-            </div>
-          </form>
-          {/* <Personal/> */}
-          <div>
-      </div>
+      <div id="login-background">
+        <div id="loginForm">
+            <img id="logo-image" src={require("./logo.png")} alt="profile"></img>
+            <h2>Nutri Gainz</h2>
+            <form className="login">
+                <div className="loginFields">
+                    <input 
+                        placeholder="username"
+                        onChange={this.validateUsername}
+                    ></input>
+                    <input 
+                        placeholder="password"
+                        onChange={this.validatePassword}
+                    ></input>
+                    <button onClick={this.validateCredentials}>LOGIN</button>
+                </div>
+            </form>
+        </div>
       </div>
     )
   }
