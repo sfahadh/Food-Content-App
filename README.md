@@ -51,6 +51,12 @@ What I added to the web application is a login page. The login page will not let
 **Username:** fahad
 **Password:** idk
 
+## Website Preview
+![home](https://user-images.githubusercontent.com/45612730/59573817-b9de1b80-9082-11e9-981d-044795581d94.png)
+![articles](https://user-images.githubusercontent.com/45612730/59573819-bba7df00-9082-11e9-92ee-0b8e49d870a5.png)
+![food-tracker](https://user-images.githubusercontent.com/45612730/59573820-bcd90c00-9082-11e9-8b4f-0ba0b6b2d878.png)
+![profile](https://user-images.githubusercontent.com/45612730/59573822-be0a3900-9082-11e9-9b3c-b14cb984db0c.png)
+
 
 ## Deployment
 This app is available at: https://food-database-app.herokuapp.com
