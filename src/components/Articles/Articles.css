@@ -57,7 +57,7 @@
 }
 
 #article-background {
-    background-image: url("./nutrition-background.jpg");
+    background-image: url("../../images/nutrition.png");
     background-size: 100%;
     border: 2px solid white;    
 }

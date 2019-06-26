@@ -38,7 +38,7 @@ input {
 
 #profile-background {
     height: 92vh;
-    background-image: url("./profile-background.jpg");
+    background-image: url("../../images/profile-background.jpg");
     background-size: 100%;
     padding-top: 1%;
 }
@@ -91,5 +91,5 @@ input {
 #login-background {
     border: 2px solid green;
     height: 90vh;
-    background-image: url("../nutrition.png");
+    background-image: url("../../images/nutrition.png");
   }

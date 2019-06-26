@@ -69,8 +69,7 @@ export default class HealthProfile extends Component {
               <input 
                 placeholder="Age"
                 name="age"
-                onChange={this.handleHealthInput}></input>
-                
+                onChange={this.handleHealthInput}></input>             
             </div>
             <div>
               <input 

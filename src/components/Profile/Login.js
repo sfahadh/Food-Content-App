@@ -64,7 +64,7 @@ export default class Login extends Component {
     return (
       <div id="login-background">
         <div id="loginForm">
-            <img id="logo-image" src={require("./logo.png")} alt="profile"></img>
+            <img id="logo-image" src={require("../../images/logo.png")} alt="profile"></img>
             <h2>Nutri Gainz</h2>
             <form className="login">
                 <div className="loginFields">

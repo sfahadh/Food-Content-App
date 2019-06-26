@@ -40,7 +40,7 @@ export default class Personal extends Component {
         <div className="infoProfile">
           <h1>Personal Info</h1>
           <div id="personalInfo">
-            <img src={require("./profilePic.png")} alt="profile"></img>
+            <img src={require("../../images/profilePic.png")} alt="profile"></img>
             <form className="general">
               <div className="names">
                 <input 

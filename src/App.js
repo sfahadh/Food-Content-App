@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import axios from 'axios'
 import {Route, Link} from "react-router-dom"
 import Home from "./components/Home/Intro"
 import Articles from "./components/Articles/Articles"

@@ -116,8 +116,8 @@ form {
 #home {
   border: 2px solid black;
   height: 87vh;
-  background-image: url("./components/Home/meEating.png");
-  background-size: 100%;
+  background-image: url("./images/meEating.png");
+  background-size: cover;
 }
 
 #food {
@@ -136,7 +136,7 @@ span {
 }
 
 body {
-  background-image: url("./components/FoodTracker/foodTracker-background.jpg");
+  background-image: url("./images/foodTracker-background.jpg");
   background-size: 100%;
 }
 
