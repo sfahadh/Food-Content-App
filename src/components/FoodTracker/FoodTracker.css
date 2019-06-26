@@ -1,3 +1,10 @@
+#foodTracker-background {
+    height: 100vh;
+    background-image: url("../../images/foodTracker-background.jpg");
+    background-size: 100%;
+    border: 1px solid black;
+}
+
 .nutrition-content {
     display: grid;
     grid-template-columns: repeat(4, 19vw);
