@@ -25,69 +25,6 @@ li {
   color: orange;
 }
 
-.nutrition-content {
-  display: grid;
-  grid-template-columns: repeat(4, 19vw);
-  gird-template-rows: repeat(5, 200px);
-  justify-content: center;
-  margin-bottom: 2%;
-}
-
-.box {
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  text-align: center;
-  padding: 10px;
-  font-size: 1.5vw;
-  background-color: rgba(65, 165, 34);
-}
-
-.bottom {
-  border-bottom: 2px solid black;
-}
-
-.left {
-  border-left: 2px solid black;
-  background-color: rgba(3, 61, 3);
-  color: orange;
-}
-
-.top {
-  background-color: rgba(3, 61, 3);
-  color: orange;
-
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-#searchFood {
-  font-size: 1.4vw;
-  width: 60vw;
-  padding: 12px;
-  color: orange;
-  background-color: rgba(3, 61, 3);
-  border: 2px solid green;
-}
-
-#food-name {
-  display: block;
-  margin: 0;
-  margin-left: 10%;
-  border: 2px solid green;
-  width: 80vw;
-  padding: 20px;
-  font-weight: 700;
-  background-color: rgba(3, 61, 3);
-}
-
-#food-name:hover {
-  background-color: green;
-}
-
 #intro {
   text-align: center;
   margin: 14vh 23vw;

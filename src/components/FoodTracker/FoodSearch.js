@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './FoodTracker.css'
 export default class FoodSearch extends Component {
 
   render() {

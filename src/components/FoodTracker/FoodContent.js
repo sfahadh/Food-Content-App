@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import FoodSearch from "./FoodSearch"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import './FoodTracker.css'
 
 export default class FoodContent extends Component {
   constructor(props) {
