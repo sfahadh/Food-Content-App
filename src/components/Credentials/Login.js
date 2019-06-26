@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './Profile.css';
-import {Redirect} from "react-router-dom"
+import './Credentials.css';
+import { Redirect } from "react-router-dom"
 
 export default class Login extends Component {
     constructor() {
@@ -16,7 +16,6 @@ export default class Login extends Component {
             open: true,
             isLoggedIn: false
         }
-        // this.handleLoginCredentials = this.handleLoginCredentials.bind(this)
         this.validatePassword = this.validatePassword.bind(this);
         this.validateUsername = this.validateUsername.bind(this);
         this.validateCredentials = this.validateCredentials.bind(this);
