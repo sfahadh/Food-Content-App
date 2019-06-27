@@ -1,5 +1,5 @@
 #home {
-    border: 2px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.397);
     height: 100vh;
     background-image: url("../../images/meEating.png");
     background-size: cover;
@@ -7,7 +7,8 @@
 
 #intro {
     text-align: center;
-    margin: 14vh 23vw;
+    width: 48vw;
+    margin: 22vh auto;
     padding: 5vw;
     background-color: rgba(65, 165, 34, 0.6);
 }
@@ -32,18 +33,30 @@
     color: green;
     text-shadow: 1px 1px orange;
 }
-
-#food {
-    display: block;
-    width: 76vw;
-    padding: 4%;
-    font-size: 1.4vw;
-    text-align: center;
-    border: 2px solid green;
-    color: orange;
-    background-color: green;
-}
   
 span {
     font-weight: 900;
+}
+
+@media screen and (max-width: 1200px) { 
+    #home {
+        background-image: url("../../images/meEating-medium.png");
+    }
+
+    #intro {
+        width: 52vw;
+        margin: 24vh auto;
+    }
+
+    #intro > h1 {
+        font-size: 4.8vw;
+    }
+    
+    #intro > h3 {
+        font-size: 2.2vw;
+    }
+
+    #credit {
+        font-size: 2vw;
+    }
 }

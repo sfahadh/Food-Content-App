@@ -67,6 +67,17 @@ form {
     background-color: green;
 }
 
+#food {
+    display: block;
+    width: 76vw;
+    padding: 4%;
+    font-size: 1.4vw;
+    text-align: center;
+    border: 2px solid green;
+    color: orange;
+    background-color: green;
+}
+
 #loading {
     text-align: center;
     font-size: 3vw;
