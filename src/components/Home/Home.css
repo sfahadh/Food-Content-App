@@ -60,3 +60,26 @@ span {
         font-size: 2vw;
     }
 }
+
+@media screen and (max-width: 900px) { 
+    #home {
+        background-image: url("../../images/meEating-small.png");
+    }
+
+    #intro {
+        width: 64vw;
+        margin: 27vh auto;
+    }
+
+    #intro > h1 {
+        font-size: 6.6vw;
+    }
+    
+    #intro > h3 {
+        font-size: 3.0vw;
+    }
+
+    #credit {
+        font-size: 3.2vw;
+    }
+}
