@@ -59,6 +59,9 @@ li {
 
   #brand {
     font-size: 2.4em;
+    display: block;
+    width: 300px;
+    text-align: center;
     margin: auto;
     margin-top: 10px;
   }
