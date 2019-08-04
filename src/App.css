@@ -48,21 +48,30 @@ li {
 
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+
+  li:nth-child(1) {
+    margin-left: -40px;
   }
 
   li {
     font-size: 1.2em;
     margin: 0;
-    margin-right: 30px;
   }
 
   #brand {
-    font-size: 2.4em;
+    font-size: 2.5em;
     display: block;
     width: 300px;
     text-align: center;
     margin: auto;
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  ul {
+    justify-content: stretch;
   }
 }
