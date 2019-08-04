@@ -6,10 +6,15 @@
 
 .articleCard {
   width: 80%;
-  margin: 2% 10%;
+  margin: 0 auto;
+  margin-top: 10%;
   height: 80%;
   border: solid black;
   background-color: rgba(65, 165, 34, 0.95);
+}
+
+.articleCard:nth-child(2) {
+  margin: 6% auto;
 }
 
 .articleCard > h1 {
