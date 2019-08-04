@@ -2,8 +2,9 @@ nav {
   display: flex;
   margin-right: 3vw;
   width: 100vw;
-  background-color: rgba(3, 61, 3, 0.918);
+  background-color: rgba(2, 102, 2, 0.918);
   position: fixed;
+  top: 0;
 }
 
 nav li:hover {
@@ -15,6 +16,7 @@ li {
   display: inline-block;
   margin: 20px 2vw 2vw 10px;
   font-size: 1.7em;
+  font-weight: 500;
 }
 
 #brand {
@@ -27,11 +29,11 @@ li {
   color: orange;
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 900px) {
   li {
     font-size: 2.7vw;
   }
-  
+
   #brand {
     margin-left: 30px;
     margin-top: 10px;
@@ -39,4 +41,25 @@ li {
   }
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    display: block;
+  }
 
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    font-size: 1.2em;
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  #brand {
+    font-size: 2.4em;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
