@@ -124,15 +124,28 @@ form {
     font-size: 1.5em;
   }
 
-  form {
-    margin-top: 10% !important;
-  }
-
   #food-name {
     width: 88vw;
   }
+}
 
-  #food-name:nth-last-child(1) {
-    padding-bottom: 9%;
+@media screen and (max-width: 1000px) {
+  #food {
+    font-size: 1.2em;
+  }
+
+  #searchFood {
+    margin-top: 7%;
+    font-size: 1.2em;
+    width: 70vw;
+  }
+
+  .box {
+    font-size: 1.2em;
+  }
+
+  #food-name {
+    font-size: 1.3em;
+    padding: 15px;
   }
 }
