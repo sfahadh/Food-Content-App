@@ -1,7 +1,19 @@
 #foodTracker-background {
-  height: 100vh;
-  background-image: url("../../images/foodTracker-background.jpg");
-  background-size: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #ffa500,
+    #dea900,
+    #bdab00,
+    #9cab00,
+    #79a900,
+    #64a30a,
+    #4d9c13,
+    #33951a,
+    #298914,
+    #1e7d0e,
+    #117107,
+    #026602
+  );
   border: 1px solid black;
 }
 
