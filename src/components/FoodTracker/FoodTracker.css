@@ -79,7 +79,7 @@ form {
 #food-name {
   display: block;
   margin: 0 auto;
-  width: 1200px;
+  width: 1100px;
   border: 2px solid green;
   padding: 20px;
   font-weight: 700;
@@ -100,4 +100,41 @@ form {
   text-align: center;
   font-size: 2vw;
   color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  .nutrition-content {
+    grid-template-columns: repeat(4, 250px);
+    margin-bottom: 2%;
+  }
+
+  #food {
+    width: 1000px;
+    font-size: 1.5em;
+  }
+
+  #searchFood {
+    font-size: 1.5em;
+    width: 800px;
+  }
+
+  .box {
+    font-size: 1.5em;
+  }
+
+  form {
+    margin-top: 10% !important;
+  }
+
+  #food-name {
+    width: 1100px;
+  }
+
+  #food-name:nth-last-child(1) {
+    padding-bottom: 9%;
+  }
+
+  #loading {
+    text-align: center;
+  }
 }
