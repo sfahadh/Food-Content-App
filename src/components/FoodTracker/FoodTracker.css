@@ -18,10 +18,31 @@
 }
 
 .nutrition-content {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 19vw);
+  grid-template-columns: repeat(4, 250px);
   justify-content: center;
   margin-bottom: 2%;
+}
+
+#food {
+  display: block;
+  width: 1000px;
+  padding: 4%;
+  font-size: 1.5em;
+  text-align: center;
+  border: 2px solid green;
+  color: orange;
+  background-color: green;
+}
+
+#searchFood {
+  font-size: 1.5em;
+  width: 800px;
+  padding: 12px;
+  color: orange;
+  background-color: rgba(2, 102, 2, 0.918);
+  border: 2px solid green;
 }
 
 .box {
@@ -29,7 +50,7 @@
   border-top: 2px solid black;
   text-align: center;
   padding: 10px;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   background-color: rgba(65, 165, 34);
 }
 
@@ -55,43 +76,28 @@ form {
   margin: 20px;
 }
 
-#searchFood {
-  font-size: 1.4vw;
-  width: 60vw;
-  padding: 12px;
-  color: orange;
-  background-color: rgba(2, 102, 2, 0.918);
-  border: 2px solid green;
-}
-
 #food-name {
   display: block;
-  margin: 0;
-  margin-left: 10%;
+  margin: 0 auto;
+  width: 1200px;
   border: 2px solid green;
-  width: 80vw;
   padding: 20px;
   font-weight: 700;
-  background-color: rgba(3, 61, 3);
+  background-color: rgba(2, 102, 2, 0.918);
+}
+
+#food-name:nth-last-child(1) {
+  padding-bottom: 9%;
+  border-left: none;
+  border-right: none;
 }
 
 #food-name:hover {
   background-color: green;
 }
 
-#food {
-  display: block;
-  width: 76vw;
-  padding: 4%;
-  font-size: 1.4vw;
-  text-align: center;
-  border: 2px solid green;
-  color: orange;
-  background-color: green;
-}
-
 #loading {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
   color: red;
 }
