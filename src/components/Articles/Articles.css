@@ -69,33 +69,22 @@
 @media only screen and (max-width: 1300px) {
   .articleCard {
     width: 85vw;
-    margin-top: 10%;
-  }
-
-  .articleCard:nth-child(2) {
-    margin: 6% auto;
   }
 
   .articleCard > h1 {
-    padding: 10px;
-    margin: 1% 5%;
-    font-size: 3em;
+    font-size: 3.3vw;
   }
 
   .articleSummary > img {
-    height: 350px;
-    margin: 0 0 30px 40px;
+    height: 320px;
+    flex: 1.4;
   }
 
   .articleSummary p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1.7vw;
   }
 
   .articleSummary button {
     font-size: 0.9em;
-    margin: 4% 0 6% 0;
-    height: 43px;
-    width: 130px;
   }
 }
