@@ -149,3 +149,32 @@ form {
     padding: 15px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .nutrition-content {
+    grid-template-columns: repeat(4, 23vw);
+  }
+
+  #food {
+    font-size: 1.2em;
+    width: 92vw;
+  }
+
+  #searchFood {
+    margin-top: 19%;
+    font-size: 1.2em;
+    width: 70vw;
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+
+  .box {
+    font-size: 1em;
+    padding: 5px;
+  }
+
+  #food-name {
+    font-size: 1.15em;
+    padding: 12px;
+  }
+}
