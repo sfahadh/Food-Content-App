@@ -178,3 +178,24 @@ form {
     padding: 12px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  #food {
+    font-size: 1em;
+    width: 92vw;
+  }
+
+  #searchFood {
+    margin-top: 28%;
+    font-size: 1em;
+  }
+
+  .box {
+    font-size: 0.88em;
+  }
+
+  #food-name {
+    font-size: 1.05em;
+    padding: 9px;
+  }
+}
