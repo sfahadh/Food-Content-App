@@ -99,8 +99,8 @@ form {
 
 #loading {
   text-align: center;
-  font-size: 2vw;
-  color: red;
+  font-size: 4vw;
+  color: orange;
 }
 
 @media screen and (max-width: 1200px) {
@@ -148,6 +148,10 @@ form {
     font-size: 1.3em;
     padding: 15px;
   }
+
+  #loading {
+    font-size: 5vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -176,6 +180,10 @@ form {
   #food-name {
     font-size: 1.15em;
     padding: 12px;
+  }
+
+  #loading {
+    font-size: 7vw;
   }
 }
 
