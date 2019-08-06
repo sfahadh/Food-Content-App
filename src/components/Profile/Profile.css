@@ -98,9 +98,15 @@ input {
 
 @media screen and (max-width: 1000px) {
   #loginForm {
+    margin-top: 16%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #loginForm {
     width: 500px;
     height: 500px;
-    margin-top: 10%;
+    margin-top: 16%;
   }
 
   #loginForm input {
