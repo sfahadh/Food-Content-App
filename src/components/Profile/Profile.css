@@ -1,95 +1,97 @@
-#personalInfo { 
-    display: flex;
-    background-color: rgba(65, 165, 34, 0.664);
+#profile-background {
+  height: 92vh;
+  background-image: url("../../images/profile-background.jpg");
+  background-size: 100%;
+  padding-top: 1%;
+}
+
+#personalInfo {
+  display: flex;
+  background-color: rgba(65, 165, 34, 0.664);
 }
 
 img {
-    border-radius: 100%;
-    margin: 3%;
-    flex: 0.4;
-    width: 10vw;
-    height: 160px;
+  border-radius: 100%;
+  margin: 3%;
+  flex: 0.4;
+  width: 10vw;
+  height: 160px;
 }
 
-
 .infoProfile {
-    width: 80vw;
-    margin: 20px auto;
+  width: 80vw;
+  margin: 20px auto;
 }
 
 .general {
-    display: block;
+  display: block;
 }
 
 .names {
-    flex: 1;
+  flex: 1;
 }
 
 input {
-    width: 22vw;
-    font-size: 1.1vw;
-    padding: 8px;
-    margin: 12px;
-}
-
-#healthTitle {
-    margin-top: 40px;
-}
-
-#profile-background {
-    height: 92vh;
-    background-image: url("../../images/profile-background.jpg");
-    background-size: 100%;
-    padding-top: 1%;
-}
-
-#loginForm h2 {
-    text-align: center;
-    font-size: 4vw;
-    margin-top: 1%;
-}
-
-#loginForm {
-    width: 38vw;
-    border: 2px solid orange;
-    margin: 2% auto;
-    background-color: white;
-    height: 500px;
-    border-radius: 10%;
-    background-color: orange;
-}
-
-#loginForm input {
-    display: block;
-    border-radius: 6%;
-    margin: 5%;
-}
-
-#logo-image {
-    width: 190px;
-    height: 180px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 3%;
-}
-
-#loginForm button {
-    width: 22.4vw;
-    margin-left: 4%;
-    margin-top: 4%;
-    height: 30px;
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 600;
-    border-radius: 5%;
-    background-color: green;
-    border: 3px solid green;
-    color: orange;
-    text-shadow: 2px 2px rgba(65, 165, 34, 0.664);
+  width: 22vw;
+  font-size: 1.1vw;
+  padding: 8px;
+  margin: 12px;
 }
 
 #login-background {
-    border: 2px solid green;
-    height: 90vh;
-    background-image: url("../../images/nutrition.png");
-  }
+  border: 2px solid green;
+  height: 100vh;
+  background-image: url("../../images/nutrition.png");
+}
+
+#loginForm {
+  width: 500px;
+  border: 2px solid orange;
+  margin: 2% auto;
+  height: 500px;
+  border-radius: 10%;
+  background-color: orange;
+  margin-top: 10%;
+}
+
+#loginForm input {
+  display: block;
+  border-radius: 6%;
+  margin-top: 0;
+  width: 300px;
+}
+
+#healthTitle {
+  margin-top: 40px;
+}
+
+#loginForm h2 {
+  text-align: center;
+  font-size: 3.4em;
+  margin-top: 1%;
+  margin-bottom: -3%;
+}
+
+#logo-image {
+  width: 190px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 7%;
+}
+
+#loginForm button {
+  display: block;
+  width: 300px;
+  margin: auto;
+  margin-top: 6%;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 5%;
+  background-color: green;
+  border: 3px solid green;
+  color: orange;
+  text-shadow: 2px 2px rgba(65, 165, 34, 0.664);
+}
