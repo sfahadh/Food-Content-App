@@ -8,6 +8,13 @@
 @media screen and (max-width: 800px) {
   #construction {
     width: 95vw;
-    padding-top: 20%;
+    padding-top: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #construction {
+    width: 95vw;
+    padding-top: 40%;
   }
 }
