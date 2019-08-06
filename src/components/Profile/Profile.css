@@ -59,6 +59,7 @@ input {
   border-radius: 6%;
   margin-top: 0;
   width: 300px;
+  font-size: 1em;
 }
 
 #healthTitle {
@@ -104,13 +105,13 @@ input {
 
 @media screen and (max-width: 600px) {
   #loginForm {
-    width: 500px;
-    height: 500px;
-    margin-top: 16%;
+    width: 85vw;
+    height: 470px;
+    margin-top: 28%;
   }
 
   #loginForm input {
-    width: 300px;
+    width: 60vw;
   }
 
   #healthTitle {
@@ -118,7 +119,7 @@ input {
   }
 
   #loginForm h2 {
-    font-size: 3.4em;
+    font-size: 2.7em;
   }
 
   #logo-image {
@@ -127,7 +128,7 @@ input {
   }
 
   #loginForm button {
-    width: 300px;
+    width: 60vw;
     height: 30px;
     font-size: 1.2em;
   }
