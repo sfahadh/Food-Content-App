@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import HealthProfile from "./HealthProfile";
 
 export default class Personal extends Component {
   constructor() {
@@ -34,56 +33,6 @@ export default class Personal extends Component {
 
   render() {
     this.storePersonalInfo();
-    return (
-      <div id="profile-background">
-        <div className="infoProfile">
-          <h1>Personal Info</h1>
-          <div id="personalInfo">
-            <img src={require("../../images/profilePic.png")} alt="profile" />
-            <form className="general">
-              <div className="names">
-                <input
-                  placeholder="First Name"
-                  name="firstName"
-                  onChange={this.handleProfileInput}
-                />
-                <input
-                  placeholder="Last Name"
-                  name="lastName"
-                  onChange={this.handleProfileInput}
-                />
-              </div>
-
-              <div>
-                <input
-                  placeholder="Email Address"
-                  name="emailAddress"
-                  onChange={this.handleProfileInput}
-                />
-                <input
-                  placeholder="Phone Number"
-                  name="phoneNumber"
-                  onChange={this.handleProfileInput}
-                />
-              </div>
-
-              <div>
-                <input
-                  placeholder="Date of Birth"
-                  name="dateOfBirth"
-                  onChange={this.handleProfileInput}
-                />
-                <input
-                  placeholder="Street Address"
-                  name="streetAddress"
-                  onChange={this.handleProfileInput}
-                />
-              </div>
-            </form>
-          </div>
-          <HealthProfile />
-        </div>
-      </div>
-    );
+    return <div id="profile-background" />;
   }
 }
