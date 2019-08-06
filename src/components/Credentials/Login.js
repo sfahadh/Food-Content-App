@@ -56,7 +56,7 @@ export default class Login extends Component {
 
   render() {
     if (this.state.isLoggedIn) {
-      return <Redirect to="/profile/personal" />;
+      return <Redirect to="/personal" />;
     }
 
     return (

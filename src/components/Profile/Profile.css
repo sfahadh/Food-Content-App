@@ -1,5 +1,5 @@
 #profile-background {
-  height: 92vh;
+  height: 100vh;
   background-image: url("../../images/profile-background.jpg");
   background-size: 100%;
   padding-top: 1%;
@@ -7,20 +7,22 @@
 
 #personalInfo {
   display: flex;
+  justify-content: space-around;
   background-color: rgba(65, 165, 34, 0.664);
+}
+
+.infoProfile {
+  width: 1200px;
+  margin: auto;
+  margin-top: 8%;
 }
 
 img {
   border-radius: 100%;
   margin: 3%;
   flex: 0.4;
-  width: 10vw;
+  width: 100px;
   height: 160px;
-}
-
-.infoProfile {
-  width: 80vw;
-  margin: 20px auto;
 }
 
 .general {
