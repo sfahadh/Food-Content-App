@@ -4,3 +4,10 @@
   margin: auto;
   padding-top: 13%;
 }
+
+@media screen and (max-width: 800px) {
+  #construction {
+    width: 95vw;
+    padding-top: 20%;
+  }
+}
